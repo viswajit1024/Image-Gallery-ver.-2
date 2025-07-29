@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+form {
+  display: flex; gap: 0.5rem; margin-bottom: 1rem;
+}
+.drop-container {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+.drop-container.hover {
+  border-color: #51cbb0;
+}
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.image-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f9f9;
+  transition: transform 0.3s;
+}
+.image-item:hover {
+  transform: scale(1.02);
+}
+.image-item img {
+  width: 100%; height: auto;
+  display: block;
+}
+.image-item .controls {
+  padding: 0.5rem;
+  text-align: center;
+}
+.image-item button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+.fallback {
+  width: 100%;
+  padding: 2rem;
+  background: #eee;
+  color: #666;
+  text-align: center;
+}
+dialog {
+  border: none; border-radius: 8px;
+  padding: 1.5rem; max-width: 400px; width: 90%;
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.5); }
+dialog input { width: 100%; padding: 0.5rem; box-sizing: border-box; }
+dialog menu { margin-top: 1rem; text-align: right; }
+dialog menu button { margin-left: 0.5rem; }
