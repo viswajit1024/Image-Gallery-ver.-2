@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Enhanced Image Gallery</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1>My Image Gallery</h1>
+
+  <form id="form">
+    <input type="url" id="url" placeholder="Image URL" required/>
+    <input type="text" id="alt" placeholder="Alt text (optional)"/>
+    <button type="submit">Add Image</button>
+  </form>
+
+  <div class="drop-container" id="dropContainer">
+    <p>Drag & drop images here, or click to select files</p>
+    <input type="file" id="fileInput" accept="image/*" multiple style="display:none"/>
+  </div>
+
+  <div id="gallery"></div>
+
+  <dialog id="editDialog">
+    <form method="dialog" id="editForm">
+      <h2>Edit Image</h2>
+      <label>Image URL:<br><input type="url" id="editUrl" required/></label><br><br>
+      <label>Alt Text:<br><input type="text" id="editAlt"/></label><br><br>
+      <menu>
+        <button value="cancel">Cancel</button>
+        <button type="submit">Save</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
